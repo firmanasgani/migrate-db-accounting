@@ -126,8 +126,8 @@ export async function migrateTable(
           try {
             // Map values according to column mapping
             const values = mapping.columns.map((colMapping) => {
-              // Check if source column exists in row
-              if (row.hasOwnProperty(colMapping.source)) {
+              // Check if source column is defined and exists in row
+              if (colMapping.source && row.hasOwnProperty(colMapping.source)) {
                 const value = row[colMapping.source];
                 // Apply transformation if defined
                 return colMapping.transform

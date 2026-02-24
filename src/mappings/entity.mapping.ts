@@ -38,19 +38,16 @@ export const entityMapping: TableMapping = {
     },
     // New columns in destination that don't exist in source
     {
-      source: "ownership_percentage",
       destination: "ownership_percentage",
       defaultValue: "100", // Default to 100% ownership
       comment: "New field in destination - defaulting to 100%",
     },
     {
-      source: "status",
       destination: "status",
       defaultValue: "active",
       comment: "New field in destination - defaulting to active",
     },
     {
-      source: "is_upload_enabled",
       destination: "is_upload_enabled",
       defaultValue: 1,
       comment: "New field in destination - defaulting to enabled",

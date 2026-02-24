@@ -5,7 +5,7 @@
  */
 
 export interface ColumnMapping {
-  source: string;
+  source?: string;
   destination: string;
   transform?: (value: any) => any;
   defaultValue?: any;
