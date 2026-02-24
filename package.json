@@ -1,0 +1,45 @@
+{
+  "name": "migrate-db",
+  "version": "1.0.0",
+  "description": "Database migration tool from vico_accounting to accounting_dev",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "migrate": "ts-node src/index.ts migrate",
+    "dry-run": "ts-node src/index.ts migrate --dry-run",
+    "test-connection-source": "ts-node src/index.ts test-connection-source",
+    "list-tables-source": "ts-node src/index.ts list-tables-source",
+    "describe:list-source": "ts-node src/index.ts describe list-source",
+    "describe:table-source": "ts-node src/index.ts describe table-source",
+    "describe:compare-source": "ts-node src/index.ts describe compare-source",
+    "describe:generate-source": "ts-node src/index.ts describe generate-mapper-source",
+    "describe:generate-all-source": "ts-node src/index.ts describe generate-all-source",
+    "test-connection-destination": "ts-node src/index.ts test-connection-destination",
+    "list-tables-destination": "ts-node src/index.ts list-tables-destination",
+    "describe:list-destination": "ts-node src/index.ts describe list-destination",
+    "describe:table-destination": "ts-node src/index.ts describe table-destination",
+    "describe:compare-destination": "ts-node src/index.ts describe compare-destination",
+    "describe:generate-destination": "ts-node src/index.ts describe generate-mapper-destination",
+    "describe:generate-all-destination": "ts-node src/index.ts describe generate-all-destination"
+  },
+  "keywords": [
+    "migration",
+    "database",
+    "accounting"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "mysql2": "^3.6.5",
+    "winston": "^3.11.0",
+    "commander": "^11.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}

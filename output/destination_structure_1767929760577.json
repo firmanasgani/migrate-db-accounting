@@ -1,0 +1,4327 @@
+{
+  "database": "destination",
+  "totalTables": 47,
+  "tables": [
+    {
+      "tableName": "_prisma_migrations",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 4,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "checksum",
+          "Type": "varchar(64)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "finished_at",
+          "Type": "datetime(3)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "migration_name",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "logs",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "rolled_back_at",
+          "Type": "datetime(3)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "started_at",
+          "Type": "datetime(3)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(3)",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "applied_steps_count",
+          "Type": "int unsigned",
+          "Null": "NO",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "assets",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 28,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "location_id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "category_id",
+          "Type": "int",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "number_list",
+          "Type": "int",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "spesification",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "useful_life",
+          "Type": "int",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "code",
+          "Type": "varchar(100)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "status",
+          "Type": "varchar(100)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "user",
+          "Type": "varchar(100)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "entity_id",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "barcode_date",
+          "Type": "date",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "images",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "description",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "acquisition_cost",
+          "Type": "double",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "is_deleted",
+          "Type": "tinyint(1)",
+          "Null": "YES",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "now()",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "created_by",
+          "Type": "varchar(100)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "now()",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_by",
+          "Type": "varchar(100)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "assets_category",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 18,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "int",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "name",
+          "Type": "varchar(150)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "description",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "is_deleted",
+          "Type": "tinyint(1)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "NO",
+          "Key": "",
+          "Default": "now()",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "created_by",
+          "Type": "varchar(100)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "NO",
+          "Key": "",
+          "Default": "now()",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_by",
+          "Type": "varchar(100)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "assets_image",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 19,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "assets_id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "image",
+          "Type": "text",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "assets_location",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 13,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "name",
+          "Type": "varchar(150)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "description",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "is_deleted",
+          "Type": "tinyint(1)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "NO",
+          "Key": "",
+          "Default": "now()",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "created_by",
+          "Type": "varchar(100)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "NO",
+          "Key": "",
+          "Default": "now()",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_by",
+          "Type": "varchar(100)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "bank_accounts",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 201,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "bank_id",
+          "Type": "varchar(3)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "name",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "own",
+          "Type": "tinyint",
+          "Null": "NO",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "deleted",
+          "Type": "tinyint",
+          "Null": "NO",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP(6)"
+        }
+      ]
+    },
+    {
+      "tableName": "banks",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 66,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(3)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "name",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP(6)"
+        }
+      ]
+    },
+    {
+      "tableName": "bonds",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 30,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "code",
+          "Type": "varchar(100)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "entity_id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "unrealized_gain_loss",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "emiten_name",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "type",
+          "Type": "varchar(100)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "cost",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "initial_value",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "closing_price",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "nominal_price",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "market_value",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "unrealized_gain_loss_price",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "coupon_rate",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "valuta_date",
+          "Type": "date",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "due_date",
+          "Type": "date",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "file_id",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "month",
+          "Type": "varchar(2)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "year",
+          "Type": "varchar(4)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "notes",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "budget_notes",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 2,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "coa_id",
+          "Type": "varchar(50)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "year",
+          "Type": "int",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "note",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+        }
+      ]
+    },
+    {
+      "tableName": "budgets",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 96,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "coa_id",
+          "Type": "varchar(50)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "year",
+          "Type": "int",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "month",
+          "Type": "int",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "budget",
+          "Type": "decimal(18,2)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "note",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "status",
+          "Type": "enum('CREATED','CHECKED','APPROVED')",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CREATED",
+          "Extra": ""
+        },
+        {
+          "Field": "created_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "checked_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "approved_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "checked_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "approved_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED"
+        }
+      ]
+    },
+    {
+      "tableName": "cash_balances",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 8,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "bank_account_id",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "period",
+          "Type": "date",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "beginning",
+          "Type": "decimal(18,2)",
+          "Null": "YES",
+          "Key": "",
+          "Default": "0.00",
+          "Extra": ""
+        },
+        {
+          "Field": "cash_in",
+          "Type": "decimal(18,2)",
+          "Null": "YES",
+          "Key": "",
+          "Default": "0.00",
+          "Extra": ""
+        },
+        {
+          "Field": "cash_out",
+          "Type": "decimal(18,2)",
+          "Null": "YES",
+          "Key": "",
+          "Default": "0.00",
+          "Extra": ""
+        },
+        {
+          "Field": "balance",
+          "Type": "decimal(18,2)",
+          "Null": "YES",
+          "Key": "",
+          "Default": "0.00",
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED"
+        }
+      ]
+    },
+    {
+      "tableName": "cash_transactions",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 23,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "transaction_date",
+          "Type": "date",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "bank_account_id",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "transaction_type",
+          "Type": "enum('IN','OUT')",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "reference_no",
+          "Type": "varchar(100)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "description",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "attachment",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "status",
+          "Type": "enum('DRAFT','CREATED','CHECKED','APPROVED','RELEASED','POSTED','REJECTED')",
+          "Null": "YES",
+          "Key": "",
+          "Default": "DRAFT",
+          "Extra": ""
+        },
+        {
+          "Field": "journal_id",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "created_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "checked_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "checked_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "approved_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "approved_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "released_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "released_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "coa",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 283,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(50)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "name",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "parent_id",
+          "Type": "varchar(50)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "accumulative",
+          "Type": "tinyint",
+          "Null": "NO",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "status",
+          "Type": "enum('submit','check','active','submit_inactive','check_inactive','inactive')",
+          "Null": "NO",
+          "Key": "",
+          "Default": "submit",
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP(6)"
+        }
+      ]
+    },
+    {
+      "tableName": "coa_bank_accounts",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 24,
+      "columns": [
+        {
+          "Field": "bank_account_id",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "coa_id",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "coa_mapping",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 39,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "entity_id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "entity_coa_id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "group_coa_id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "mapping_status",
+          "Type": "enum('unmapped','mapped','reviewed','rejected')",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "notes",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "created_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+        },
+        {
+          "Field": "updated_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "coa_movements",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 4376,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "coa_id",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "start_period",
+          "Type": "date",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "end_period",
+          "Type": "date",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "previous_period",
+          "Type": "date",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "beginning",
+          "Type": "double",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "debit_movement",
+          "Type": "double",
+          "Null": "NO",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "credit_movement",
+          "Type": "double",
+          "Null": "NO",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "balance",
+          "Type": "double",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP(6)"
+        }
+      ]
+    },
+    {
+      "tableName": "coa_temps",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 0,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(50)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "name",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "parent_id",
+          "Type": "varchar(50)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "accumulative",
+          "Type": "tinyint",
+          "Null": "NO",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "amount",
+          "Type": "double",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP(6)"
+        }
+      ]
+    },
+    {
+      "tableName": "consolidation_periods",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 4,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "code",
+          "Type": "varchar(20)",
+          "Null": "NO",
+          "Key": "UNI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "name",
+          "Type": "varchar(100)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "year",
+          "Type": "int",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "period_type",
+          "Type": "enum('monthly','quarterly','yearly')",
+          "Null": "YES",
+          "Key": "",
+          "Default": "quarterly",
+          "Extra": ""
+        },
+        {
+          "Field": "start_date",
+          "Type": "date",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "end_date",
+          "Type": "date",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "is_fx_enabled",
+          "Type": "tinyint(1)",
+          "Null": "YES",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "status",
+          "Type": "enum('draft','open','locked','closed')",
+          "Null": "YES",
+          "Key": "",
+          "Default": "draft",
+          "Extra": ""
+        },
+        {
+          "Field": "upload_cutoff_date",
+          "Type": "date",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "approval_deadline",
+          "Type": "date",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "description",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+        }
+      ]
+    },
+    {
+      "tableName": "deposito",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 32,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "entity_id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "bank_name",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "type_deposito",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "bilyet_number",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "nominal",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "valuta_date",
+          "Type": "date",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "due_date",
+          "Type": "date",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "rate",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "gross",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "tax",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "net_of_tax",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "file_id",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "month",
+          "Type": "varchar(2)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "year",
+          "Type": "varchar(4)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "days",
+          "Type": "int",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "dt_cash_transactions",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 23,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "cash_transaction_id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "coa_id",
+          "Type": "varchar(50)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "amount",
+          "Type": "decimal(18,2)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "dc",
+          "Type": "enum('D','C')",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "notes",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "entity",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 5,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "name",
+          "Type": "varchar(150)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "description",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "is_deleted",
+          "Type": "tinyint(1)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "NO",
+          "Key": "",
+          "Default": "now()",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "created_by",
+          "Type": "varchar(100)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "NO",
+          "Key": "",
+          "Default": "now()",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_by",
+          "Type": "varchar(100)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "ownership_percentage",
+          "Type": "varchar(10)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "status",
+          "Type": "enum('active','inactive')",
+          "Null": "YES",
+          "Key": "",
+          "Default": "active",
+          "Extra": ""
+        },
+        {
+          "Field": "is_upload_enabled",
+          "Type": "tinyint(1)",
+          "Null": "YES",
+          "Key": "",
+          "Default": "1",
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "entity_coa",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 42,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "entity_id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "code",
+          "Type": "varchar(50)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "name",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "type",
+          "Type": "enum('assets','liability','equity','revenue','expense','others')",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "parent_id",
+          "Type": "varchar(50)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "is_active",
+          "Type": "tinyint(1)",
+          "Null": "YES",
+          "Key": "",
+          "Default": "1",
+          "Extra": ""
+        },
+        {
+          "Field": "status",
+          "Type": "enum('submit','checked','approved','rejected')",
+          "Null": "YES",
+          "Key": "",
+          "Default": "submit",
+          "Extra": ""
+        },
+        {
+          "Field": "checked_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "checked_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "approved_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "approved_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "rejected_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "rejected_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "rejection_note",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "created_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+        },
+        {
+          "Field": "updated_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "group_coa",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 12,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "code",
+          "Type": "varchar(20)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "name",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "type",
+          "Type": "enum('asset','liability','equity','revenue','expense')",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "parent_id",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "status",
+          "Type": "enum('submit','checked','approved','reject')",
+          "Null": "YES",
+          "Key": "",
+          "Default": "submit",
+          "Extra": ""
+        },
+        {
+          "Field": "is_active",
+          "Type": "tinyint(1)",
+          "Null": "YES",
+          "Key": "",
+          "Default": "1",
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "created_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+        },
+        {
+          "Field": "updated_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "journal_codes",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 0,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "int",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "name",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "deleted",
+          "Type": "tinyint",
+          "Null": "NO",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP(6)"
+        }
+      ]
+    },
+    {
+      "tableName": "journal_details",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 13696,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "journal_id",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "coa_id",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "amount",
+          "Type": "double",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "type",
+          "Type": "enum('D','C')",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "desc",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP(6)"
+        }
+      ]
+    },
+    {
+      "tableName": "journals",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 4710,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "bank_account_sender_id",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "bank_account_receiver_id",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "desc",
+          "Type": "text",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "type",
+          "Type": "enum('income','outcome','general')",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "payment_type",
+          "Type": "enum('cheque','bank_transfer','debit')",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "cheque_no",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "invoice_no",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "currency_code",
+          "Type": "varchar(3)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "attachment",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "status",
+          "Type": "enum('draft','created','checked','approved','released','reject','closed')",
+          "Null": "NO",
+          "Key": "",
+          "Default": "created",
+          "Extra": ""
+        },
+        {
+          "Field": "created_date",
+          "Type": "date",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "checked_date",
+          "Type": "date",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "approved_date",
+          "Type": "date",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "posting_date",
+          "Type": "date",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_by",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "checked_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "approved_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "deleted",
+          "Type": "tinyint",
+          "Null": "NO",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP(6)"
+        },
+        {
+          "Field": "rejected_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "rejected_date",
+          "Type": "date",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "rejection_reason",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "released_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "released_date",
+          "Type": "date",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "journals_active_list",
+      "tableType": "VIEW",
+      "engine": null,
+      "rowCount": null,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "desc",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "status",
+          "Type": "enum('draft','created','checked','approved','released','reject','closed')",
+          "Null": "YES",
+          "Key": "",
+          "Default": "created",
+          "Extra": ""
+        },
+        {
+          "Field": "total_debit",
+          "Type": "double",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "total_credit",
+          "Type": "double",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created",
+          "Type": "date",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "creator_name",
+          "Type": "varchar(45)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "checked_name",
+          "Type": "varchar(45)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "approved_name",
+          "Type": "varchar(45)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "journals_history_view",
+      "tableType": "VIEW",
+      "engine": null,
+      "rowCount": null,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "desc",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "status",
+          "Type": "enum('draft','created','checked','approved','released','reject','closed')",
+          "Null": "YES",
+          "Key": "",
+          "Default": "created",
+          "Extra": ""
+        },
+        {
+          "Field": "total_debit",
+          "Type": "double",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "total_credit",
+          "Type": "double",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created",
+          "Type": "date",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "creator_name",
+          "Type": "varchar(45)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "checked_name",
+          "Type": "varchar(45)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "approved_name",
+          "Type": "varchar(45)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "logs",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 43551,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "coa_id",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "journal_id",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "user_id",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "action",
+          "Type": "varchar(100)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "before",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "after",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP(6)"
+        }
+      ]
+    },
+    {
+      "tableName": "message",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 3,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "journal_id",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "message",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "from_id",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "to_id",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "type",
+          "Type": "enum('journal_checker_rejection','journal_approver_rejection')",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "read",
+          "Type": "tinyint",
+          "Null": "NO",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP(6)"
+        }
+      ]
+    },
+    {
+      "tableName": "migrations",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 11,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "int",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": "auto_increment"
+        },
+        {
+          "Field": "timestamp",
+          "Type": "bigint",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "name",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "notes",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 31,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "coa_entity_id",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "trial_balance_id",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "title",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "message",
+          "Type": "text",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "notes",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "from_user_id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "to_entity_id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+        }
+      ]
+    },
+    {
+      "tableName": "notifications",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 52,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "entity_id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "action",
+          "Type": "varchar(100)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "title",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "message",
+          "Type": "text",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED"
+        }
+      ]
+    },
+    {
+      "tableName": "reksadana",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 39,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "entity_id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "code",
+          "Type": "varchar(100)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "unrealized_gain_loss",
+          "Type": "varchar(100)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "net_amount",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "average_nav",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "unit",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "nav",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "market_balance",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "unrealized_gain_loss_price",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "notes",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "file_id",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "month",
+          "Type": "varchar(2)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "year",
+          "Type": "varchar(4)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "type",
+          "Type": "varchar(100)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "name",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "report_content",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 321,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "rh_id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "coa_id",
+          "Type": "varchar(50)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "report_headers",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 64,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "report_type",
+          "Type": "enum('balance_sheet','income_statement','budget_report')",
+          "Null": "NO",
+          "Key": "",
+          "Default": "balance_sheet",
+          "Extra": ""
+        },
+        {
+          "Field": "report_section",
+          "Type": "enum('Aktiva Lancar','Aktiva Tidak Lancar','Kewajiban','Ekuitas','Pendapatan Usaha','Beban Usaha','Penghasilan Beban Lain-Lain','Laba (Rugi) Bersih Tahun Berjalan','Lain-Lain','Budget')",
+          "Null": "NO",
+          "Key": "",
+          "Default": "Aktiva Lancar",
+          "Extra": ""
+        },
+        {
+          "Field": "sequence",
+          "Type": "int",
+          "Null": "NO",
+          "Key": "",
+          "Default": "1",
+          "Extra": ""
+        },
+        {
+          "Field": "ytd_adjustment",
+          "Type": "tinyint",
+          "Null": "NO",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "report_title",
+          "Type": "varchar(200)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "is_parent",
+          "Type": "tinyint",
+          "Null": "YES",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "report_parent",
+          "Type": "varchar(50)",
+          "Null": "YES",
+          "Key": "",
+          "Default": "",
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "roles",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 18,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "name",
+          "Type": "varchar(50)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP(6)"
+        }
+      ]
+    },
+    {
+      "tableName": "settings",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 11,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "key",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "value",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP(6)"
+        }
+      ]
+    },
+    {
+      "tableName": "shares",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 24,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "entity_id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "code",
+          "Type": "varchar(100)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "type_shares",
+          "Type": "varchar(100)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "unrealized_gain_loss",
+          "Type": "varchar(100)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "emiten_name",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "lot",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "volume",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "cost",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "closing_price",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "stock_value",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "market_value",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "unrealized_gain_loss_amount",
+          "Type": "decimal(38,20)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "notes",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "file_id",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "month",
+          "Type": "varchar(2)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "year",
+          "Type": "varchar(4)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "submission",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 2,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "period_id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "entity_id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "status",
+          "Type": "enum('on_progress','finish')",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": "on_progress",
+          "Extra": ""
+        },
+        {
+          "Field": "notes",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+        }
+      ]
+    },
+    {
+      "tableName": "template_management",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 1,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "filename",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "file_path",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "type",
+          "Type": "varchar(50)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_by",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_by",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+        }
+      ]
+    },
+    {
+      "tableName": "trial_balance",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 6,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "upload_file_id",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "period_id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "entity_id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "entity_coa_code",
+          "Type": "varchar(50)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "entity_coa_id",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "line_number",
+          "Type": "int",
+          "Null": "YES",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "beginning",
+          "Type": "decimal(18,2)",
+          "Null": "YES",
+          "Key": "",
+          "Default": "0.00",
+          "Extra": ""
+        },
+        {
+          "Field": "debit_movement",
+          "Type": "decimal(18,2)",
+          "Null": "YES",
+          "Key": "",
+          "Default": "0.00",
+          "Extra": ""
+        },
+        {
+          "Field": "credit_movement",
+          "Type": "decimal(18,2)",
+          "Null": "YES",
+          "Key": "",
+          "Default": "0.00",
+          "Extra": ""
+        },
+        {
+          "Field": "balances",
+          "Type": "decimal(18,2)",
+          "Null": "YES",
+          "Key": "",
+          "Default": "0.00",
+          "Extra": ""
+        },
+        {
+          "Field": "currency",
+          "Type": "varchar(50)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "upload_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "status",
+          "Type": "enum('uploaded','validate','locked','failed')",
+          "Null": "YES",
+          "Key": "",
+          "Default": "uploaded",
+          "Extra": ""
+        },
+        {
+          "Field": "approval_status",
+          "Type": "enum('draft','submit','checked','approved','rejected')",
+          "Null": "YES",
+          "Key": "",
+          "Default": "draft",
+          "Extra": ""
+        },
+        {
+          "Field": "submitted_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "submitted_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "checked_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "checked_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "approved_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "approved_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "rejected_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "rejected_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "rejection_reason",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP"
+        }
+      ]
+    },
+    {
+      "tableName": "upload_files",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 168,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "filename",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "path",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "status",
+          "Type": "enum('upload','processing','done','failed')",
+          "Null": "YES",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "user_id",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "total_data",
+          "Type": "int",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "reason_failed",
+          "Type": "text",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "time_upload",
+          "Type": "datetime",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "time_processing",
+          "Type": "datetime",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "time_finished",
+          "Type": "datetime",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "entity_id",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "user_entity",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 14,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "fullname",
+          "Type": "varchar(200)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "username",
+          "Type": "varchar(100)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "email",
+          "Type": "varchar(100)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "password",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "entity_id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "login_failed",
+          "Type": "int",
+          "Null": "NO",
+          "Key": "",
+          "Default": "0",
+          "Extra": ""
+        },
+        {
+          "Field": "last_login",
+          "Type": "datetime",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "active",
+          "Type": "tinyint(1)",
+          "Null": "YES",
+          "Key": "",
+          "Default": "1",
+          "Extra": ""
+        },
+        {
+          "Field": "created_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_by",
+          "Type": "varchar(36)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "user_roles",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 107,
+      "columns": [
+        {
+          "Field": "user_id",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "role_id",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        }
+      ]
+    },
+    {
+      "tableName": "user_type",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 4,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "name",
+          "Type": "varchar(50)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP(6)"
+        }
+      ]
+    },
+    {
+      "tableName": "users",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 12,
+      "columns": [
+        {
+          "Field": "id",
+          "Type": "varchar(36)",
+          "Null": "NO",
+          "Key": "PRI",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "name",
+          "Type": "varchar(45)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "display_name",
+          "Type": "varchar(45)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "password",
+          "Type": "varchar(255)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "email",
+          "Type": "varchar(45)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "phone_number",
+          "Type": "varchar(15)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "type_id",
+          "Type": "varchar(45)",
+          "Null": "NO",
+          "Key": "MUL",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "title",
+          "Type": "varchar(45)",
+          "Null": "NO",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "signature",
+          "Type": "varchar(255)",
+          "Null": "YES",
+          "Key": "",
+          "Default": null,
+          "Extra": ""
+        },
+        {
+          "Field": "status",
+          "Type": "enum('active','inactive','suspend')",
+          "Null": "NO",
+          "Key": "",
+          "Default": "inactive",
+          "Extra": ""
+        },
+        {
+          "Field": "created_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED"
+        },
+        {
+          "Field": "updated_at",
+          "Type": "timestamp(6)",
+          "Null": "NO",
+          "Key": "",
+          "Default": "CURRENT_TIMESTAMP(6)",
+          "Extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP(6)"
+        }
+      ]
+    }
+  ],
+  "timestamp": "2026-01-09T03:36:00.576Z"
+}

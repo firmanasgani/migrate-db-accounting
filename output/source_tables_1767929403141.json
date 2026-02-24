@@ -1,0 +1,163 @@
+{
+  "database": "source",
+  "totalTables": 26,
+  "tables": [
+    {
+      "tableName": "assets",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 14
+    },
+    {
+      "tableName": "assets_category",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 12
+    },
+    {
+      "tableName": "assets_image",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 13
+    },
+    {
+      "tableName": "assets_location",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 5
+    },
+    {
+      "tableName": "bank_accounts",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 135
+    },
+    {
+      "tableName": "banks",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 62
+    },
+    {
+      "tableName": "coa",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 277
+    },
+    {
+      "tableName": "coa_bank_accounts",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 17
+    },
+    {
+      "tableName": "coa_movements",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 4466
+    },
+    {
+      "tableName": "coa_temps",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 0
+    },
+    {
+      "tableName": "entity",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 0
+    },
+    {
+      "tableName": "journal_codes",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 0
+    },
+    {
+      "tableName": "journal_details",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 17024
+    },
+    {
+      "tableName": "journals",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 6123
+    },
+    {
+      "tableName": "journals_active_list",
+      "tableType": "VIEW",
+      "engine": null,
+      "rowCount": null
+    },
+    {
+      "tableName": "journals_history_view",
+      "tableType": "VIEW",
+      "engine": null,
+      "rowCount": null
+    },
+    {
+      "tableName": "logs",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 59025
+    },
+    {
+      "tableName": "message",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 3
+    },
+    {
+      "tableName": "migrations",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 11
+    },
+    {
+      "tableName": "report_content",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 309
+    },
+    {
+      "tableName": "report_headers",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 61
+    },
+    {
+      "tableName": "roles",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 9
+    },
+    {
+      "tableName": "settings",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 5
+    },
+    {
+      "tableName": "user_roles",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 22
+    },
+    {
+      "tableName": "user_type",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 4
+    },
+    {
+      "tableName": "users",
+      "tableType": "BASE TABLE",
+      "engine": "InnoDB",
+      "rowCount": 9
+    }
+  ],
+  "timestamp": "2026-01-09T03:30:03.140Z"
+}
